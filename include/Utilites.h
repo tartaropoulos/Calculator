@@ -10,11 +10,9 @@
 template<typename T>
 // concept IsCalculatorInput = std::integral<T> || std::floating_point<T> || std::same_as<T, Calculator::Operators>;
 concept IsCalculatorInput = (!std::same_as<T, char> && !std::same_as<T, bool> && std::integral<T>) || 
-                            std::floating_point<T> || 
-                            std::same_as<T, Calculator::Operators>;
+                              std::floating_point<T> || 
+                              std::same_as<T, Calculator::Operators>;
 
-// template<typename T>
-// bool getInputItem(std::string_view msg, T& value)
 bool getInputItem(std::string_view msg, IsCalculatorInput auto& value)
 {
     std::cout << msg;

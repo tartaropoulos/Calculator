@@ -17,9 +17,6 @@ int main()
         double rightOperand;
         bool resultRight{getInputItem("Enter a number for right operand: ", rightOperand)};
 
-        // char wrongValue;
-        // bool resultWrong{getInputItem("Enter a wrong value: ", wrongValue)};
-
         if(!(resultLeft && resultOperator && resultRight))
         {
             std::string msg{"Error input!\nDo you want to try again? (y/n): "};
