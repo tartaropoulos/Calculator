@@ -1,8 +1,6 @@
 #include "Calculator.h"
 #include "Utilites.h"
 
-#include <algorithm>
-
 int main()
 {
     Calculator calculator;
@@ -26,7 +24,13 @@ int main()
             continue;
         }
 
-        std::cout << "Result: " << calculator.calculate(leftOperand, op, rightOperand) << std::endl;
+        double result{calculator.calculate(leftOperand, op, rightOperand)};
+
+        if( result ==  std::numeric_limits<double>::infinity() || 
+            result == -std::numeric_limits<double>::infinity() )
+            std::cout << "Division by zero" << std::endl;
+        else
+            std::cout << "Result: " << result << std::endl;
 
         std::string msg{"Do you want to continue? (y/n): "};
         if(!askToContinue(msg)) return 0;
