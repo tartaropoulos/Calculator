@@ -9,7 +9,7 @@ int main()
         double leftOperand;
         bool resultLeft{getInputItem("Enter a number for left operand: ", leftOperand)};
 
-        Calculator::Operators op;
+        CalculatorOperators op;
         bool resultOperator{getInputItem("Enter an operator (+, -, *, /): ", op)};
 
         double rightOperand;

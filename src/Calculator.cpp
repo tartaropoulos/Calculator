@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <array>
 
-std::istream& operator>>(std::istream& is, Calculator::Operators& op)
+std::istream& operator>>(std::istream& is, CalculatorOperators& op)
 {
     char temp;
     if(is >> temp)
@@ -17,7 +17,7 @@ std::istream& operator>>(std::istream& is, Calculator::Operators& op)
             return is;
         }
 
-        op = static_cast<Calculator::Operators>(temp);
+        op = static_cast<CalculatorOperators>(temp);
     }
 
     return is;
