@@ -5,8 +5,7 @@
 
 std::istream& operator>>(std::istream& is, CalculatorOperators& op)
 {
-    char temp;
-    if(is >> temp)
+    if(char temp; is >> temp)
     {
         std::array validOperators{'+', '-', '*', '/'};
         auto result{std::find(validOperators.begin(), validOperators.end(), temp)};
