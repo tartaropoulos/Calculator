@@ -2,6 +2,7 @@
 #define UTILITES_H
 
 #include <iostream>
+#include <limits>
 #include <string_view>
 
 #include "Calculator.h"
